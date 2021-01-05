@@ -51,8 +51,8 @@ public class settings {
 	
 	
 	// Getters
-	public final String getAuthentification() {
-		return username + "$" + password + "$" + salt;
+	public final String[] getAuthentification() {
+		return new String[] {username, password, salt};
 	}
 	
 	// Setters

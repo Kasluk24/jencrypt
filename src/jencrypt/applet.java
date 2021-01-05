@@ -35,7 +35,7 @@ public class applet {
 	}
 	
 	private void newUser() {
-		System.out.println("newUser");
+		System.out.println("new user");
 		
 		String username = JOptionPane.showInputDialog("Benutzername:");
 		
@@ -45,12 +45,18 @@ public class applet {
 	
 	private void login() {
 		System.out.println("login");
+		
+		String username = JOptionPane.showInputDialog("Benutzername:");
+		
+		if (enc.verifyPassword(username, JOptionPane.showInputDialog("Passwort:"))) {
+			System.out.println("Login erfolgreich");
+		} else {
+			System.out.println("Falsches Passwort oder falscher Benutzername");
+		}
 	}
 	
 	private void exit() {
 		set.saveProperties();
 	}
 	
-	
-
 }
